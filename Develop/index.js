@@ -71,7 +71,7 @@ inquirer
   ])
   .then((data) => {
    
-    const filename = data.title.replace(' ', "").toLowerCase()
+    const filename = data.projectTitle.replace(' ', "").toLowerCase()
     fs.writeFile(`${filename}.md`, generateMarkdown(data), (err) =>
         err ? console.error(err) : console.log("Your professional README has been generated."))
 })
