@@ -41,7 +41,7 @@ inquirer
             {value: 'MIT'}, //MIT 
             {value: 'BSD'}, //BSD 3-Clause
             {value: 'MPL'}, //Mozilla Public
-            {value: 'None'} //No license
+            {value: 'No License'} //No license
         ]
     },
     {
@@ -67,6 +67,7 @@ inquirer
         name: 'email',
         message: 'Enter your email: '
     },
+    
     
   ])
   .then((data) => {
