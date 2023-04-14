@@ -1,8 +1,8 @@
 
 // Renders license badge
-function renderLicenseBadge(license) {
-  if (license !== "No License") {
-    return `![Badge](https://img.shields.io/badge/License-${license}-blue.svg)`
+function renderLicenseBadge(licenseType) {
+  if (licenseType !== "No License") {
+    return `![Badge](https://img.shields.io/badge/License-${licenseType}-blue.svg)`
 // returns empty string if there is no license
   } else {
     return ``;
@@ -11,8 +11,8 @@ function renderLicenseBadge(license) {
 
 
 // renders license link and returns empty string if no license selected
-function renderLicenseLink(license) {
-  if (license !== "No License") {
+function renderLicenseLink(licenseType) {
+  if (licenseType !== "No License") {
     return `- [License](#License)`;
   } else {
     return ``;
@@ -21,17 +21,17 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license !== "No License") {
+function renderLicenseSection(licenseType) {
+  if (licenseType !== "No License") {
     return `## License
-    This application is covered by the ${license} license.`
+    This application is covered by the ${licenseType} license.`
   }
   return ``;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.projectTitle}
 
   ## Description
   ${data.projectDescription}
@@ -42,25 +42,25 @@ function generateMarkdown(data) {
   - [Questions](#questions)
   - [Test](#Test)
   - [Contributing](#contributing)
-  ${renderLicenseLink(data.license)}
+  ${renderLicenseLink(data.licenseType)}
   
   
   ## Usage
-  ${data.usage}
+  ${data.projectUsage}
 
-  ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data.licenseType)}
 
   ## Installation
-  ${data.installation}
+  ${data.projectInstallation}
 
   ## Test
-  ${data.test}
+  ${data.projectTest}
 
   ## Contributing
-  ${data.contributing}
+  ${data.projectContribution}
 
   ## Questions
-  Contact me with any additional questions here: ${data.email}
+  Contact me with any additional questions here: ${data.email} and 
   Check out my GitHub here: ${data.username}
 
 `;
