@@ -1,3 +1,5 @@
+SAMPLE GENERATED FILE
+
 # readme generator
 
   ## Description
